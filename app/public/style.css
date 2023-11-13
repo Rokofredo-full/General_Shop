@@ -8,8 +8,14 @@ body {
     align-items: center;
     min-height: 100svh;
     font-size: larger;
+    text-align: center;
     background-image: url(https://img.freepik.com/foto-gratis/tablas-madera-tienda-ropa-borrosa-fondo_1253-47.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1699660800&semt=ais);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
+
 
 .form-container{
     width: 500px;
@@ -27,11 +33,16 @@ form+p, form p{
     text-align: center;
 }
 
+.titulo{
+    text-align: center;
+}
+
 .select{
     border: unset;
     border-radius: 5px;
     padding: 15px 30px;
-    font-size: larger;    
+    font-size: larger;  
+    appearance: none;  
 }
 input, button{
     border: unset;

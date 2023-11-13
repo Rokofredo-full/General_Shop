@@ -12,10 +12,22 @@
     <main>
         <div class="form-container">
             <h1>Crear cuenta</h1>
-            <p>Completa el formulario con Exito para crear tu cuenta</p>
+            <p>Completa el formulario con exito para crear tu cuenta</p>
             <form id="register-form">
+
+                <select class="select">
+                    <option value="0">Tipo de documento</option>
+                    <option value="1">Tarjeta de Identidad</option>
+                    <option value="2">Cédula de Ciudadania</option>
+                    <option value="3">Cédula de Extrangeria</option>
+                    <option value="4">Pasaporte</option>
+                </select>
+
                 <label for="user" class="diminuto">Usuario</label>
-                <input type="text" name="user" id="user" placeholder="Nombre de Usuario">
+                <input type="text" name="user" id="user" placeholder="Nombres">
+
+                <label for="user" class="diminuto">Usuario</label>
+                <input type="text" name="user" id="user" placeholder="Apellidos">
 
                 <label for="email" class="diminuto">Email</label>
                 <input type="email" name="email" id="email" placeholder="Correo Electronico">
@@ -27,7 +39,7 @@
                 <button type="submit">Ingresar</button>
                 <p class="error escondido">Error al registrarse!!!</p>
             </form>
-            <p>Ya tienes cuenta? <a href="/login">Iniciar sesion.</a></p>
+            <p>¿Ya tienes cuenta? <a href="./login">Iniciar sesion.</a></p>
         </div>
     </main>
 

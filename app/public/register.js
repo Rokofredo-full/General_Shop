@@ -7,17 +7,16 @@ document.getElementById("register-form").addEventListener("submit", async(e)=>{
             "Content-Type" : "aplication/json"
         },
         body:JSON.stringify({
-
             user: e.target.children.user.value,
             email: e.target.children.email.value,
             password: e.target.children.password.value
 
-            // select: e.target.children.select.value,
-            // name: e.target.children.name.value,
-            // lastname: e.target.children.lastname.value,
-            // email: e.target.children.email.value,
-            // password: e.target.children.password.value,
-            // confirmPassword: e.target.children.confirmPassword.value
         })
-    })
+    });
 })
+// select: e.target.children.select.value,
+// name: e.target.children.name.value,
+// lastname: e.target.children.lastname.value,
+// email: e.target.children.email.value,
+// password: e.target.children.password.value,
+// confirmPassword: e.target.children.confirmPassword.value
