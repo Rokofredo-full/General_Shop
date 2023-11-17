@@ -7,7 +7,11 @@ dotenv.config();
 export const usuarios = [{
     user: "Admin",
     email: "Admin@admin.co",
-    password: "$2a$05$3G6kHUxreTcgRvkF6okhJOm9DnB1DmlusWSveHA63hiY5VKEmyll."
+    password: "$2a$05$3G6kHUxreTcgRvkF6okhJOm9DnB1DmlusWSveHA63hiY5VKEmyll.",
+
+    /*use: "Usu",
+    email: "usu@usu.com",
+    password:"u"*/
 }]
 
 
