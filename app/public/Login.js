@@ -4,6 +4,8 @@ document.getElementById("login-form").addEventListener("submit",async (e)=>{
     e.preventDefault();
     const user = e.target.children.user.value;
     const password = e.target.children.password.value;
+    //const confirmPassword = e.target.children.confirmPassword.value;
+    //Agregar la confirmacion de la contrasena para que no genere error.
     const res = await fetch("/api/login",{
         method:"POST",
         headers:{

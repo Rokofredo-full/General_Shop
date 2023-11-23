@@ -8,6 +8,7 @@ import dotenv from "dotenv";
 import path from 'path';
 import {fileURLToPath} from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 import { methods as authentication } from "./controllers/authentication.controller.js";
 
 import { methods as authorization} from "./middlewares/authorization.js";
@@ -24,11 +25,13 @@ app.use(express.json());
 app.use(cookieParser());
 
 //Rutas
-app.get("/login",authorization.soloPublico,(req,res)=> res.sendFile(__dirname + "/pages/login.html"));
+app.get("/login",(req,res)=> res.sendFile(__dirname + "/pages/login.html"),authorization.soloPublico);
 
-app.get("/register",authorization.soloPublico,(req,res)=> res.sendFile(__dirname + "/pages/register.html"));
+app.get("/register",(req,res)=> res.sendFile(__dirname + "/pages/register.html"),authorization.soloPublico);
 
-app.get("/admin",authorization.soloAdmin,(req,res)=> res.sendFile(__dirname + "/pages/Admin/admin.html"));
+app.get("/home",(req,res)=> res.sendFile(__dirname + "/pages/home.html"));
+
+app.get("/admin",(req,res)=> res.sendFile(__dirname + "/pages/Admin/admin.html"),authorization.soloAdmin);
 
 app.post("/api/login", authentication.login);
 app.post("/api/register", authentication.register);

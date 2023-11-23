@@ -13,16 +13,32 @@
         <div class="form-container">
             <h1>Crear cuenta</h1>
             <p>Completa el formulario con Exito para crear tu cuenta</p>
+
             <form id="register-form">
-                <label for="user" class="diminuto">Usuario</label>
-                <input type="text" name="user" id="user" placeholder="Nombre de Usuario">
+
+                <label for="user" class="diminuto">Name</label>
+                <input type="text" name="user" id="user" placeholder="Nombres del Usuario">
+
+                <label for="lastname" class="diminuto">LastName</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Apellidos del usuario">
 
                 <label for="email" class="diminuto">Email</label>
                 <input type="email" name="email" id="email" placeholder="Correo Electronico">
+                
+                <label for="select">Tipo de Documento</label>
+                <select class="select" for="select" id="select">
+                    <option value="0">...</option>
+                    <option value="1">Tarjeta de Identidad.</option>
+                    <option value="2">Cedula de Ciudadania.</option>
+                    <option value="3">Cedula de Extrangeria.</option>
+                    <option value="4">Pasaporte</option>
+                </select>
 
                 <label for="password" class="diminuto">Contraseña</label>
-
                 <input type="password" name="password" id="password" placeholder="Contraseña">
+
+                <label for="confirmPassword" class="diminuto">Confirmacion de Contraseña</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmacion de Contraseña">
 
                 <button type="submit">Ingresar</button>
                 <p class="error escondido">Error al registrarse!!!</p>
@@ -30,51 +46,5 @@
             <p>Ya tienes cuenta? <a href="/login">Iniciar sesion.</a></p>
         </div>
     </main>
-
-    <!-- <main>
-        <div class="form-container">
-            <h1>Registrate!!!</h1>
-            <p>Completa el formulario para creartu cuenta con exito!</p>
-            <form id="register-form">
-                <select class="select" for="select" id="select">
-                    <option value="0">Tipo de documento</option>
-                    <option value="1">Tarjeta de Identidad</option>
-                    <option value="2">Cedula de Ciudadania</option>
-                    <option value="3">Cedula de Extrangeria</option>
-                    <option value="4">Pasaporte</option>
-                </select>
-
-                <label for="name">
-                    <i class='bx bx-user' ></i>
-                    <input type="text" id="name" placeholder="Nombres Completos">
-                </label>
-
-                <label for="lastname">
-                    <i class='bx bx-user' ></i>
-                    <input type="text" id="lastname" placeholder="Apellidos Completos">
-                </label>
-
-                <label type="email">
-                    <i class='bx bx-envelope' ></i>
-                    <input type="email" id="email" placeholder="Correo Electronico">
-                </label>
-
-                <label for="password">
-                    <i class='bx bx-lock-alt' ></i>
-                    <input type="password" id="password" placeholder="Contraseña">
-                </label>
-
-                <label for="confirmPassword">
-                    <i class='bx bx-lock-alt' ></i>
-                    <input type="password" id="confirmPassword" placeholder="Confirmar Contraseña">
-                </label>
-
-                <button type="submit" value="Registrarse">Registrarte</button>
-
-                <p class="error escondido">Error al registrarse!!!</p>
-            </form>
-            <p>Ya tienes cuenta? <a href="/login">Iniciar sesion.</a></p>
-        </div>
-    </main> -->
 </body>
 </html>
