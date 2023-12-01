@@ -34,7 +34,7 @@ function revisarCookie (req){
         const usuarioARevisar = usuarios.find(usuario => usuario.user === codificada.user);
         console.log(usuarioARevisar)
         if (!usuarioARevisar){
-            return false;
+            return false
         }
         return true;
     }

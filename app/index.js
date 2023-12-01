@@ -29,9 +29,9 @@ app.get("/login",(req,res)=> res.sendFile(__dirname + "/pages/login.html"),autho
 
 app.get("/register",(req,res)=> res.sendFile(__dirname + "/pages/register.html"),authorization.soloPublico);
 
-app.get("/home",(req,res)=> res.sendFile(__dirname + "/pages/home.html"));
+app.get("/home",(req,res)=> res.sendFile(__dirname + "/pages/home.html"),authorization.soloPublico);
 
 app.get("/admin",(req,res)=> res.sendFile(__dirname + "/pages/Admin/admin.html"),authorization.soloAdmin);
 
-app.post("/api/login", authentication.login);
-app.post("/api/register", authentication.register);
+app.post("/api/login",authentication.login);
+app.post("/api/register",authentication.register);

@@ -13,6 +13,7 @@ document.getElementById("register-form").addEventListener("submit", async(e)=>{
             email: e.target.children.email.value,
             password: e.target.children.password.value,
             select: e.target.children.select.value,
+            numDoc: e.target.children.numDoc.value,
             lastname: e.target.children.lastname.value,
             confirmPassword: e.target.children.confirmPassword.value
         })
