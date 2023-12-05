@@ -41,7 +41,7 @@ app.post("/buscar-articulos", (req, res) => {
     const searchTerm = req.body.searchTerm;
   
     const query = "SELECT * FROM articulos WHERE tipo_Articulo LIKE ?";
-    connection.query(query, [`%${searchTerm}%`], (error, results) => {
+    connection.query(query, [`%${searchTerm}$%`], (error, results) => {
       if (error) {
         console.error("Error al buscar artículos:", error);
         return res.status(500).json({ error: "Error al buscar artículos" });
