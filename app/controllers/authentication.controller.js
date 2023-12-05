@@ -15,7 +15,6 @@ export const usuarios = [{
     
 }]
 
-
 async function login(req,res){
     console.log(req.body);
 
@@ -75,7 +74,6 @@ async function register(req, res) {
       const numDoc = req.body.numDoc;
       const password = req.body.password;
 
-   
       if (
         !user ||
         !lastname ||
