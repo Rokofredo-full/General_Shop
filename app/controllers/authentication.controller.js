@@ -64,7 +64,6 @@ async function login(req,res){
     
     }
 
-    
 async function register(req, res) {
     try {
       const connection = await getConnection();
@@ -75,7 +74,6 @@ async function register(req, res) {
       const numDoc = req.body.numDoc;
       const password = req.body.password;
 
-   
       if (
         !user ||
         !lastname ||
