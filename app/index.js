@@ -35,3 +35,18 @@ app.get("/admin",(req,res)=> res.sendFile(__dirname + "/pages/Admin/admin.html")
 
 app.post("/api/login",authentication.login);
 app.post("/api/register",authentication.register);
+
+
+app.post("/buscar-articulos", (req, res) => {
+    const searchTerm = req.body.searchTerm;
+  
+    const query = "SELECT * FROM articulos WHERE tipo_Articulo LIKE ?";
+    connection.query(query, [`%${searchTerm}%`], (error, results) => {
+      if (error) {
+        console.error("Error al buscar artículos:", error);
+        return res.status(500).json({ error: "Error al buscar artículos" });
+      }
+  
+      res.json(results);
+      });
+  });
