@@ -5,15 +5,7 @@ import { getConnection } from "../dataBase/dataBase.js";
 
 dotenv.config();
 //usuarios
-export const usuarios = [{
-//Este usuario deberia entrar a admin 
-    user: "Admin",
-    email: "Admin@admin.co",
-    password: "$2a$05$3G6kHUxreTcgRvkF6okhJOm9DnB1DmlusWSveHA63hiY5VKEmyll.",
-    confirmPassword: "$2a$05$3G6kHUxreTcgRvkF6okhJOm9DnB1DmlusWSveHA63hiY5VKEmyll.",
-//Estos dos usuarios dentran al Home
-    
-}]
+
 
 async function login(req,res){
     console.log(req.body);
@@ -32,7 +24,7 @@ async function login(req,res){
     
     const userQuery = await connection.query("SELECT * FROM user WHERE email = ?", email, async (error, results)=>{
       if (error){
-        return res.status(500).send({status: "Error",message: "Error al logearse."});
+        return res.status(500).send({status: "Error",message: "Error de acceso."});
       }
 
       if (results.length === 0){
@@ -45,13 +37,13 @@ async function login(req,res){
       if (!loginCorrecto){
         return res.status(400).send({status: "Error", message: "La informacion ingresada es incorrecta!"})
       }
-    
+      //Token
       const token = jsonwebtoken.sign(
         {user: usuarioARevisar.email}, 
         process.env.JWT_SECRET,
         {expiresIn: process.env.JWT_EXPIRATION}
       );
-    
+
       const cookieOption = {
         expires: new Date (Date.now() + process.env.JWT_COOKIE_EXPIRATION *24 *60 *60 *1000),
         path: "/"
@@ -59,8 +51,7 @@ async function login(req,res){
       res.cookie("jwt",token,cookieOption);
     
     //Aqui es donde se direcciona despues de ingresar. por ahora solo esta direccionando a Home si eres user.
-      res.send({status: "Ok", message: "Usuario logeado con exito!", redirect: "/home"});
-    
+      res.send({status: "Ok", message: "Usuario logeado con exito!", redirect: "/homeI.html"});
     
     }
 
@@ -102,10 +93,11 @@ async function register(req, res) {
    
       const result = await connection.query("INSERT INTO user SET ?", usuario);
    
+       //Aqui es donde se direcciona despues de registrase. por ahora solo esta direccionando a Home si eres user.
       return res.status(201).send({
         status: "Ok",
         message: `Usuario agregado`,
-        redirect: "/home",
+        redirect: "./homeI.html",
       });
     } catch (error) {
       console.error(error);

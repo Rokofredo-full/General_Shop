@@ -1,0 +1,79 @@
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡Bienvenido!</h2>
+                <p>Si ya tienes cuenta inicia sesión</p>
+                <input type="button" value="Iniciar sesión" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                    <h2>Crear una Cuenta</h2>
+                <div class="icons">
+
+                </div>
+                <form class="form">
+                        <select class="select">
+                            <option value="0">Tipo de documento</option>
+                            <option value="1">Tarjeta de Identidad</option>
+                            <option value="2">Cédula de Ciudadania</option>
+                            <option value="3">Cédula de Extrangeria</option>
+                            <option value="4">Pasaporte</option>
+                        </select>
+                        <label >
+                            <i class='bx bx-user' ></i>
+                            <input type="text" placeholder="Nombres Completos">
+                        </label>
+                        <label >
+                            <i class='bx bx-user' ></i>
+                            <input type="text" placeholder="Apellidos Completos">
+                        </label>
+                        <label >
+                            <i class='bx bx-envelope' ></i>
+                            <input type="email" placeholder="Correo Electronico">
+                        </label>
+                        <label >
+                            <i class='bx bx-lock-alt' ></i>
+                           <input type="password" placeholder="Contraseña">
+                        </label>
+                        <label >
+                            <i class='bx bx-lock-alt' ></i>
+                            <input type="password" placeholder="Confirmar Contraseña">
+                        </label>
+                        <input type="submit" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡Bienvenido!</h2>
+                <p>Para obtener bonos y/o descuentos interesantes registrate con tus datos.</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Inicia Sesión</h2>
+                <div class="icons">
+                    <i class='bx bxl-google'></i>
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram-alt' ></i>
+                </div>
+                <form class="form">
+                    <label >
+                        <i class='bx bx-envelope' ></i>
+                        <input type="email" placeholder="Correo Electronico">
+                    </label>
+                    <label >
+                        <i class='bx bx-lock-alt' ></i>
+                        <input type="password" placeholder="Contraseña">
+                    </label>
+                    <p class="error escondido">Error al iniciar sesión</p>
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
+            </div>
+        </div>
+    </div>

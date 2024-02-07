@@ -1,5 +1,8 @@
 import { createPool } from "mysql2/promise";
 import config from "../config.js";
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const connection = createPool({
   user: config.user,
@@ -9,4 +12,5 @@ const connection = createPool({
   database: config.database,
 });
 
-export const getConnection = () => connection;
+export const getConnection =  () =>  connection; 
+
