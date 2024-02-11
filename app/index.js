@@ -67,15 +67,6 @@ app.get ("/articulos", async (req,res) =>{
 
 
 
-
-
-
-
-
-
-
-
-
 /*************BUSCADOR*************/ 
 app.post("/buscar-articulos", (req, res) => {
     const searchTerm = req.body.searchTerm;
